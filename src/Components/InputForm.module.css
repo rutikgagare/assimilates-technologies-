@@ -1,0 +1,57 @@
+.form{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    border-radius: 0.5rem;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    padding: 1rem;
+    height: 65vh;
+    margin: 1rem 0;
+}
+
+.form select{
+    width: 100%;
+}
+
+.form label{
+    display: block;
+    margin:0.5rem;
+}
+
+.form select{
+    padding: 0.5rem 1rem;
+}
+
+.form div{
+    margin: 0.5rem 0;
+}
+
+.buttonDiv{
+    padding: 1rem 0;
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonDiv button{
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    border: none;
+    outline: none;
+}
+
+.submit{
+    background-color: green;
+}
+
+.clear{
+    background-color: grey;
+}
+
+@media only screen and (max-width: 600px) {
+    .form{
+        width: 90%;
+    }
+  }

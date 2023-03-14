@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import React,{useState} from 'react';
+import InputForm from './Components/InputForm';
+import Display from './Components/Display';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+  const [data,setData] = useState([{state:"Maharashtra",division:"Nashik",district:"Ahmednagar",taluka:"Sangamner",village:"Warvandi"}]);
+
+  const addDataHandler = (newData) =>{
+    setData((prevState)=>{
+      return [...prevState,newData];
+    });
+  }
+
+  return(
+    <div className="app">
+      <InputForm addData = {addDataHandler}></InputForm>
+      <Display userData = {data}></Display>
     </div>
   );
 }
